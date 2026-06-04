@@ -1,7 +1,7 @@
-# Agent Queue
+# AgentRunway
 
-Failure-driven Elixir/OTP learning project for understanding Symphony-style AI
-agent orchestration.
+AgentRunway is a failure-driven Elixir/OTP learning project for understanding
+Symphony-style AI agent orchestration.
 
 The project starts as a pure job queue and grows into a tiny orchestrator with
 supervised workers, retry policy, fake Linear polling, fake Codex runs, and
