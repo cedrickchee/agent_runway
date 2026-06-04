@@ -336,14 +336,10 @@ defmodule AgentQueue.Orchestrator do
     }
   end
 
-  defp complete_entry(state, nil), do: state
-
   defp complete_entry(state, entry) do
     {:ok, _job, queue} = Queue.complete(state.queue, entry.job.id)
     %{state | queue: queue}
   end
-
-  defp fail_entry(state, nil, _reason), do: state
 
   defp fail_entry(state, entry, reason) do
     fail_claimed_job(state, entry.job, reason)
@@ -365,8 +361,6 @@ defmodule AgentQueue.Orchestrator do
         %{state | queue: queue}
     end
   end
-
-  defp block_entry(state, nil, _reason), do: state
 
   defp block_entry(state, entry, reason) do
     case Queue.block(state.queue, entry.job.id, reason) do

@@ -42,6 +42,7 @@ defmodule AgentQueue.OrchestratorTest do
     end)
   end
 
+  @tag capture_log: true
   test "agent crashes are converted into orchestrator-owned failure state" do
     issue = issue("AGENT-1", runner: :crash)
     {:ok, tracker} = start_supervised({FakeTracker, issues: [issue]})
