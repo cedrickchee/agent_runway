@@ -39,6 +39,10 @@ defmodule AgentQueue.QueueServer do
     GenServer.call(server, :snapshot)
   end
 
+  def bad_idea(server \\ __MODULE__) do
+    GenServer.call(server, :bad_idea)
+  end
+
   @impl true
   def init(_opts) do
     {:ok, Queue.new()}
@@ -84,6 +88,11 @@ defmodule AgentQueue.QueueServer do
 
   def handle_call(:snapshot, _from, queue) do
     {:reply, queue, queue}
+  end
+
+  def handle_call(:bad_idea, _from, queue) do
+    Process.sleep(10_000)
+    {:reply, :ok, queue}
   end
 
   @impl true
