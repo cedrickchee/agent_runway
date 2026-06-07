@@ -21,7 +21,28 @@ mix test
 iex -S mix
 ```
 
-## Learning Order
+## Self-Guided Course
+
+Start with the self-guided AgentRunway course:
+
+- [course/README.md](course/README.md)
+
+The course is the recommended path if you want a practical, hands-on tutorial.
+It includes full walkthroughs, labs, break-it exercises, solutions, reflection
+questions, and checkpoints. It is organized around the same failure-driven
+progression as the code:
+
+1. pure queue
+2. queue as a `GenServer`
+3. external workers and failures
+4. supervision and bounded concurrency
+5. orchestrator state
+6. workspace and adapter boundaries
+7. Symphony architecture mapping
+
+## Quick Code Reading Order
+
+If you want to inspect the implementation directly, use this shorter path:
 
 1. Read `lib/agent_queue/queue.ex` and `test/agent_queue/queue_test.exs`.
 2. Read `lib/agent_queue/queue_server.ex` and `test/agent_queue/queue_server_test.exs`.
