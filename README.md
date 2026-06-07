@@ -1,6 +1,10 @@
 # AgentRunway
 
-![AgentRunway banner: Build your own mini software factory](docs/assets/agentrunway-banner.png)
+<img
+  src="docs/assets/agentrunway-banner.png"
+  alt="AgentRunway banner: Build your own mini software factory"
+  width="60%"
+/>
 
 AgentRunway is a failure-driven Elixir/OTP learning project for understanding
 Symphony-style AI agent orchestration.
