@@ -7,6 +7,19 @@ The project starts as a pure job queue and grows into a tiny orchestrator with
 supervised workers, retry policy, fake Linear polling, fake Codex runs, and
 per-issue workspaces.
 
+## Why Symphony
+
+[Symphony](https://github.com/openai/symphony) is the orchestration machinery
+for Codex-style AI agents. It automates the layer that turns issues into
+controlled agent runs, so a team can choose between a highly efficient Software
+Factory with human guardrails or a more autonomous, lights-out Dark Factory.
+
+AgentRunway is a mini-Symphony for learning. It keeps the same architectural
+shape - tracker polling, authoritative orchestrator state, supervised workers,
+retry/backoff, blocked work, workspace boundaries, and agent-run lifecycle -
+but replaces production integrations with small fake modules you can inspect,
+break, and understand.
+
 ## Install Elixir
 
 This workspace does not currently have `elixir`, `erl`, or `mix` installed.
