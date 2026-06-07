@@ -1,5 +1,7 @@
 # AgentRunway
 
+![AgentRunway banner: Build your own mini software factory](docs/assets/agentrunway-banner.png)
+
 AgentRunway is a failure-driven Elixir/OTP learning project for understanding
 Symphony-style AI agent orchestration.
 
