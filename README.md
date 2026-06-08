@@ -26,6 +26,27 @@ retry/backoff, blocked work, workspace boundaries, and agent-run lifecycle -
 but replaces production integrations with small fake modules you can inspect,
 break, and understand.
 
+## Why Elixir
+
+Elixir and Erlang's OTP (Open Telecom Platform) are unusually well suited for
+AI-agent orchestration because they natively implement the Actor Model: isolated
+processes, message passing, supervision, crash handling, and explicit runtime
+state. That is the same shape many modern agentic frameworks try to recreate
+with queues, workers, schedulers, process managers, and external coordination
+systems.
+
+In Node.js or similar stacks, reliable orchestration often means assembling
+several moving parts before you even get to the agent logic. On the BEAM VM,
+many of those primitives are already part of the runtime. Elixir fits agent
+orchestration because long-running, failure-prone, concurrent work is exactly
+what OTP was built to model.
+
+Most teams do not have OpenAI-scale infrastructure, a million-line codebase, or
+thousands of tickets in an issue tracker. AgentRunway keeps the architecture
+small enough to study while preserving the important ideas: one orchestrator,
+bounded agent runs, supervised failures, retry policy, blocked work, and human
+guardrails.
+
 ## Install Elixir
 
 This workspace does not currently have `elixir`, `erl`, or `mix` installed.
