@@ -31,7 +31,7 @@ break, and understand.
 Elixir and Erlang's OTP (Open Telecom Platform) are unusually well suited for
 AI-agent orchestration because they natively implement the Actor Model: isolated
 processes, message passing, supervision, crash handling, and explicit runtime
-state. That is the same shape many modern agentic frameworks try to recreate
+state. That is [the same shape many modern agentic frameworks try to recreate](https://georgeguimaraes.com/your-agent-orchestrator-is-just-a-bad-clone-of-elixir/)
 with queues, workers, schedulers, process managers, and external coordination
 systems.
 
